@@ -5,11 +5,9 @@ Home: https://sigg-iten.ch/research/
 
 Package license: GPL (>= 2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-nsprcomp-feedstock/blob/master/LICENSE.txt)
 
 Summary: Two methods for performing a constrained principal component analysis (PCA), where non-negativity and/or sparsity constraints are enforced on the principal axes (PAs). The function 'nsprcomp' computes one principal component (PC) after the other. Each PA is optimized such that the corresponding PC has maximum additional variance not explained by the previous components. In contrast, the function 'nscumcomp' jointly computes all PCs such that the cumulative variance is maximal. Both functions have the same interface as the 'prcomp' function from the 'stats' package (plus some extra parameters), and both return the result of the analysis as an object of class 'nsprcomp', which inherits from 'prcomp'. See <https://sigg-iten.ch/learningbits/2013/05/27/nsprcomp-is-on-cran/> and Sigg et al. (2008) <doi:10.1145/1390156.1390277> for more details.
-
-
 
 Current build status
 ====================
@@ -38,6 +36,7 @@ Installing `r-nsprcomp` from the `conda-forge` channel can be achieved by adding
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-nsprcomp` can be installed with:
@@ -108,9 +107,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers

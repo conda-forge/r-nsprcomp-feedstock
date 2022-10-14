@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 2
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,6 +23,7 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
   run:
@@ -35,7 +36,7 @@ test:
 
 about:
   home: https://sigg-iten.ch/research/
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Two methods for performing a constrained principal component analysis (PCA), where
     non-negativity and/or sparsity constraints are enforced on the principal axes (PAs).
     The function 'nsprcomp' computes one principal component (PC) after the other. Each
@@ -47,7 +48,8 @@ about:
     'nsprcomp', which inherits from 'prcomp'. See <https://sigg-iten.ch/learningbits/2013/05/27/nsprcomp-is-on-cran/>
     and Sigg et al. (2008) <doi:10.1145/1390156.1390277> for more details.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:

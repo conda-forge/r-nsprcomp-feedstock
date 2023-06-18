@@ -1,11 +1,11 @@
-About r-nsprcomp
-================
+About r-nsprcomp-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-nsprcomp-feedstock/blob/main/LICENSE.txt)
 
 Home: https://sigg-iten.ch/research/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-nsprcomp-feedstock/blob/main/LICENSE.txt)
 
 Summary: Two methods for performing a constrained principal component analysis (PCA), where non-negativity and/or sparsity constraints are enforced on the principal axes (PAs). The function 'nsprcomp' computes one principal component (PC) after the other. Each PA is optimized such that the corresponding PC has maximum additional variance not explained by the previous components. In contrast, the function 'nscumcomp' jointly computes all PCs such that the cumulative variance is maximal. Both functions have the same interface as the 'prcomp' function from the 'stats' package (plus some extra parameters), and both return the result of the analysis as an object of class 'nsprcomp', which inherits from 'prcomp'. See <https://sigg-iten.ch/learningbits/2013/05/27/nsprcomp-is-on-cran/> and Sigg et al. (2008) <doi:10.1145/1390156.1390277> for more details.
 
